@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   def create
     authorize User
 
-    Users::Create.new.call(user_params).then do |result|
+    Users::Create.new(user_params).call.then do |result|
       if result.ok
         redirect_to dashboard_path
       else
