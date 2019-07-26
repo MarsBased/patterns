@@ -1,0 +1,19 @@
+<%# Notice that we are using the sign_up_form instance variable for the form %>
+<%= simple_form_for(@sign_up_form,
+                    url: sign_up_path) do |form| %>
+
+  <%# User fields will be accessed via simple_fields_for %>
+  <%# One of the advantages of the pattern is that the errors of the user belong to the %>
+  <%# user and not to the signup form. The same happens with the organization. %>
+  <%= form.simple_fields_for :user do |user_form| %>
+    <%= user_form.input :email %>
+    <%= user_form.input :password %>
+  <% end %>
+
+  <%# Organization fields will also be accessed via simple_fields_for %>
+  <%= form.simple_fields_for :organization do |org_form| %>
+    <%= org_form.input :name %>
+  <% end %>
+
+  <%= form.submit %>
+<% end %>
