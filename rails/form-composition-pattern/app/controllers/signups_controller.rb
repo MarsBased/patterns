@@ -22,7 +22,7 @@ class SignUpsController < ApplicationController
   def signup_params
     params.require(:sign_up_form).permit(
       user_attributes: %i(email password),
-      organization_attributes: [:name]
+      organization_attributes: %i(name)
     )
   end
 

@@ -23,7 +23,7 @@ class ProfilesController < ApplicationController
   def profile_params
     params.require(:profile_form).permit(
       user_attributes: %i(email),
-      organization_attributes: [:name]
+      organization_attributes: %i(name)
     )
   end
 

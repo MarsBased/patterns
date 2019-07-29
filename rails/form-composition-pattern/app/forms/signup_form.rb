@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # This pattern is used to have multiple models being saved in the same form without
-# writing additional logic that the one that the one Rails already provides to us.
+# writing additional logic that the one Rails already provides.
 class SignUpForm
 
   # By using ActiveModel::Model we can use this class with Rails form helpers.
