@@ -117,11 +117,9 @@ Use the `present` helper method (provided by Keynote) to create presenters.
 
 ### Are decorators cached?
 
-Is this a recommended approach?
+Yes, this is the recommended approach:
 
 ```erb
 <%= present(@user).full_name %>
 <%= present(@user).formatted_phone %>
 ```
-
-Don't know 🤷
