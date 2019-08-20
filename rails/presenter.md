@@ -97,8 +97,6 @@ end
 
 Use the `present` helper method (provided by Keynote) to create presenters.
 
-⚠️Some of our code bases uses the `k` method alias insted of `present`, although is now discouraged ️️⚠️
-
 #### `app/views/_navbar.html.erb`
 
 ```erb
@@ -112,6 +110,8 @@ Use the `present` helper method (provided by Keynote) to create presenters.
   </div>
 </div>
 ```
+
+⚠️Some of our code bases uses the `k` method alias insted of `present`, although is now discouraged ️️⚠️
 
 ## FAQ
 
