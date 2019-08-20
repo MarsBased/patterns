@@ -18,7 +18,7 @@ The name of the module doesn't need to match the name of a Rails model.
 ```ruby
 module Users
   class Update # (1)
- 
+
     prepend SimpleCommand #(2)
 
     def initialize(user, params) # (4)
