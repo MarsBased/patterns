@@ -2,7 +2,7 @@
 
 A presenter pattern helps to separate business logic (model) and presentation logic (presenter)
 
-A presenter is meant to be used from the views. If there are methods that needs to be used from services or commands, that methods should be placed in the model, or another class instead.
+A presenter is meant to be used from the views. If there are methods that need to be used from services or commands, these methods should be placed in the model, or another class instead.
 
 ## Solution overview
 
