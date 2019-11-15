@@ -6,7 +6,7 @@ A presenter is meant to be used from the views. If there are methods that need t
 
 ## Solution overview
 
-We choosed [Keynote](https://github.com/rf-/keynote) gem to implement presenters:
+We chose [Keynote](https://github.com/rf-/keynote) gem to implement presenters:
 
 #### `./Gemfile`
 
