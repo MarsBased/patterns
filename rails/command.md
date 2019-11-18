@@ -91,7 +91,7 @@ end
 Commands are only intended to be used if there are side effects in the code or there are multiple operations that need to be performed as one.
 For simple ActiveRecord operations there is no need to create a Command.
 
-As a rule of thumb, use a command if you are defining multiple private methods that are related to the same functionality in the same class.
+As a rule of thumb, use a command if you are defining multiple private methods related to a common functionality inside a class that has other responsibilities besides the one you are implementing.
 
 ### I need to create a module for just one command?
 
@@ -105,4 +105,4 @@ for other developers not used to the pattern.
 ### Testing guidelines
 
 One of the advantages of using commands is being able to test business logic without having to write controller or system tests.
-In order to maintain commands easy to test they shouldn't have dependencies from Rails controllers or views.
+In order to maintain commands easy to test they shouldn't have dependencies from Rails controllers or views. Also, it's also recommended injecting dependencies that the command needs in the initializer to better mock them.
