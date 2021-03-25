@@ -53,7 +53,7 @@ end
 ```
 Checking if the records are valid before saving is not enough as unexpected race conditions could happen leaving inconsistent data in the database.
 - (2) Getters need to be created for every model we want in the form. As this is a create form, we are instantiating the models directly in the form.
-- (3) For every entity we need to create a <entity>_attributes=(attributes) method. This method will be used by Rails via ActiveModel::Model to treat the models as nested forms.
+- (3) For every entity we need to create a entity_attributes=(attributes) method. This method will be used by Rails via ActiveModel::Model to treat the models as nested forms.
 
 ## `app/controllers/signups_controller.rb`
 
