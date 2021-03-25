@@ -6,13 +6,13 @@ It helps on maintaining Rails code simple by separating algorithms from how the 
 
 ## Solution overview
 
-All query objects are POROs placed in the '/app/queries/' folder.
+All query objects are POROs placed in the `/app/queries/` folder.
 
 ## Usage: Query object
 
 The actual object that encapsulates all the logic.
 
-### 'app/queries/search_users.rb'
+### `app/queries/search_users.rb`
 
 ```ruby
 # frozen_string_literal: true
@@ -43,7 +43,7 @@ class SearchUsers # (1)
 end
 ```
 
-- (1) The name for that object explains its concrete use case. There's no need to add `Search` as prefix.
+- (1) The name for that object explains its concrete use case. There's no need to add `Query` as prefix.
 - (2) The initializer takes an scope to start from. This allows to compose it with other query objects and/or regular ActiveRecord methods.
 - (3) The class has a single call method which takes the additional parameters needed to perform the query, if any. The method calls a number of private methods to incrementally build the query in small steps. In the end it adds an order clause to make sure the query always returns the same results having the same data in the DB.
 
@@ -57,7 +57,7 @@ users = SearchUsers.new.call(language: :en, email: "baker221b@example.com")
 
 ## Usage: From a controller
 
-### 'app/controllers/users_controller.rb'
+### `app/controllers/users_controller.rb`
 
 ```ruby
 # frozen_string_literal: true
